@@ -1,15 +1,17 @@
 package com.schmeister.devprep.Arrays;
 
+import java.util.Arrays;
+
 public class Kadanes {
 
 	public static void kadanes() {
 		int arr[] = { 1, 2, 3, -2, 5 };
-		System.out.println(kadanes(arr));
-		System.out.println(kandaneForMaxSubArrayForNegativ(arr));
+		App.print("Kadanes",arr,kadanes(arr));
+		App.print("Kadanes",arr,kandaneForMaxSubArrayForNegativ(arr));
 		
 		int arr2[] = { -1, -2, -3, -2, -5 };
-		System.out.println(kadanes(arr2));
-		System.out.println(kandaneForMaxSubArrayForNegativ(arr2));		
+		App.print("Kadanes",arr,kadanes(arr2));
+		App.print("Kadanes",arr,kandaneForMaxSubArrayForNegativ(arr2));
 	}
 
 	public static int kadanes(int[] arr) {

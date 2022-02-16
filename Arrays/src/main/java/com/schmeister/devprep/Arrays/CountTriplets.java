@@ -24,8 +24,7 @@ public class CountTriplets {
 			while (j < k) {
 				if (arr[i] == arr[j] + arr[k]) {
 
-					// pair found
-					System.out.println("numbers are " + arr[i] + " " + arr[j] + " " + arr[k]);
+					App.print("Triplets", arr[i], arr[j], arr[k]);
 
 					return;
 				} else if (arr[i] > arr[j] + arr[k])

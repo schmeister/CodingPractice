@@ -1,20 +1,23 @@
 package com.schmeister.devprep.Arrays;
 
+import java.util.Arrays;
+
 public class SubArrayWithGivenSum {
 
 	public static void getSum() {
 		int n = 5;
 		int s = 12;
 		int a[] = { 1, 2, 3, 7, 5 };
-		System.out.println(subArraySum(a, n, s));
+		subArraySum(a, s);
 
 		n = 10;
 		s = 15;
 		int a2[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-		System.out.println(subArraySum(a2, n, s));
+		subArraySum(a2, s);
 	}
 
-	private static int subArraySum(int arr[], int n, int sum) {
+	private static int subArraySum(int arr[], int sum) {
+		int n = arr.length;
 		int curr_sum = arr[0];
 		int start = 0;
 
@@ -31,7 +34,7 @@ public class SubArrayWithGivenSum {
 			// then return true
 			if (curr_sum == sum) {
 				int p = i - 1;
-				System.out.println("Sum found between indexes " + start + " and " + p);
+				App.print("Sum: ", Arrays.copyOfRange(arr, start, p+1), sum);
 				return 1;
 			}
 
