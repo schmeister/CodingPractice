@@ -1,10 +1,13 @@
 package com.schmeister.devprep.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class RainWater {
 
-	static void rainWater() {
+	public static void rainWater() {
 		int arr[] = new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 };
-		App.print("RainWater", findWater(arr));
+		Print.print("RainWater", findWater(arr));
 	}
 
 	static int findWater(int[] arr) {

@@ -2,11 +2,14 @@ package com.schmeister.devprep.Arrays;
 
 import java.util.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class Sort012 {
-	static void sort012() {
+	public static void sort012() {
 		int arr[] = { 0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1 };
 		int arr2[] = sort012(arr);
-		App.print("Sort012: ", arr, arr2);
+		Print.print("Sort012: ", arr, arr2);
 	}
 
 	static int[] sort012(int a[]) {

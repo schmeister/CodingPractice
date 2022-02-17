@@ -2,6 +2,9 @@ package com.schmeister.devprep.Arrays;
 
 import java.util.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class MergeSortedArrays {
 	public static void mergeSortedArrays() {
 		int[] arr1 = { 1, 3, 5, 7 };
@@ -12,7 +15,7 @@ public class MergeSortedArrays {
 
 		int[] arr3 = mergeSortedArrays(arr1, arr2);
 
-		App.print("MergeSortedArrays", arr1, arr2, arr3);
+		Print.print("MergeSortedArrays", arr1, arr2, arr3);
 		
 	}
 

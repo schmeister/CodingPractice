@@ -2,6 +2,9 @@ package com.schmeister.devprep.Arrays;
 
 import java.util.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class SubArrayWithGivenSum {
 
 	public static void getSum() {
@@ -34,7 +37,7 @@ public class SubArrayWithGivenSum {
 			// then return true
 			if (curr_sum == sum) {
 				int p = i - 1;
-				App.print("Sum: ", Arrays.copyOfRange(arr, start, p+1), sum);
+				Print.print("Sum: ", Arrays.copyOfRange(arr, start, p+1), sum);
 				return 1;
 			}
 

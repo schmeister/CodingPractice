@@ -2,16 +2,19 @@ package com.schmeister.devprep.Arrays;
 
 import java.util.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class ZigZag {
 	// Driver method to test the above function
 	public static void zigZag() {
 		int arr[] = new int[] { 4, 3, 7, 8, 6, 2, 1 };
 		zigZag(arr);
-		App.print("ZigZag", arr);
+		Print.print("ZigZag", arr);
 
 		int arr2[] = new int[] { 7, 6, 9, 10, 3, 2, 1 };
 		zigZag(arr2);
-		App.print("ZigZag", arr2);
+		Print.print("ZigZag", arr2);
 	}
 
 	static void zigZag(int[] arr) {

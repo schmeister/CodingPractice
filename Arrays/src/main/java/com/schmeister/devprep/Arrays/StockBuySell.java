@@ -1,12 +1,15 @@
 package com.schmeister.devprep.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class StockBuySell {
 	public static void stockBuySell()
     {
         int price[] = { 100, 180, 260, 310, 40, 535, 695 };
  
         // function call
-        App.print("StockBuySell", maxProfit(price));
+        Print.print("StockBuySell", maxProfit(price));
     }
 	
 	static int maxProfit(int prices[]) {

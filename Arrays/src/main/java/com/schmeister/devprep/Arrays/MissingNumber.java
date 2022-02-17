@@ -2,6 +2,9 @@ package com.schmeister.devprep.Arrays;
 
 import java.util.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class MissingNumber {
 	// Driver code
 	public static void getMissingNo() {
@@ -9,7 +12,7 @@ public class MissingNumber {
 		int n = a.length + 1;
 		int miss = getMissingNo(a, n);
 
-		App.print("MissingNumber", a, miss);
+		Print.print("MissingNumber", a, miss);
 	}
 
 	static int getMissingNo(int a[], int n) {

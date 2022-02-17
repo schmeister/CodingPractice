@@ -2,6 +2,9 @@ package com.schmeister.devprep.Arrays;
 
 import java.util.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class ReverseInGroups {
 
 	public static void reverse()
@@ -12,7 +15,7 @@ public class ReverseInGroups {
      
         reverse(arr, k);
      
-        App.print("Reverse", arr);
+        Print.print("Reverse", arr);
     }
 	public static void reverse(int[] arr, int size) {
 		int len = arr.length;

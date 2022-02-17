@@ -2,6 +2,9 @@ package com.schmeister.devprep.Arrays;
 
 import java.util.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class CountTriplets {
 
 	public static void triplets()
@@ -24,7 +27,7 @@ public class CountTriplets {
 			while (j < k) {
 				if (arr[i] == arr[j] + arr[k]) {
 
-					App.print("Triplets", arr[i], arr[j], arr[k]);
+					Print.print("Triplets", arr[i], arr[j], arr[k]);
 
 					return;
 				} else if (arr[i] > arr[j] + arr[k])

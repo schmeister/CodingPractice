@@ -3,6 +3,9 @@ package com.schmeister.devprep.Arrays;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class Leaders {
 
 	public static void leaders() {
@@ -21,6 +24,6 @@ public class Leaders {
 			}
 		}
 
-		App.print("Leaders", arr,  al);
+		Print.print("Leaders", arr,  al);
 	}
 }

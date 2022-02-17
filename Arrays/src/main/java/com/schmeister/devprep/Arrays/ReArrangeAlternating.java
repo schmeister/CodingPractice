@@ -2,13 +2,16 @@ package com.schmeister.devprep.Arrays;
 
 import java.util.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class ReArrangeAlternating {
 	// Driver code
 	public static void rearrangeAlternating() {
 		int arr[] = new int[] { 1, 2, 3, 4, 5, 6 };
 		int temp[] = rearrangeAlternating(arr);
 
-		App.print("Alternating: ", arr, temp);
+		Print.print("Alternating: ", arr, temp);
 	}
 
 	static int[] rearrangeAlternating(int[] arr) {

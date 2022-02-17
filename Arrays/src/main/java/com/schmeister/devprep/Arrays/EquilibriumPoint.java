@@ -2,6 +2,9 @@ package com.schmeister.devprep.Arrays;
 
 import java.util.Arrays;
 
+import com.schmeister.devprep.App;
+import com.schmeister.devprep.Print;
+
 public class EquilibriumPoint {
 	public static void equilibriumPoint() {
 		int arr[] = { -7, 1, 5, 2, -4, 3, 0 };
@@ -27,7 +30,7 @@ public class EquilibriumPoint {
 			else
 				rightsum += arr[right--];
 		}
-		App.print("Equilibrium", arr, left);
+		Print.print("Equilibrium", arr, left);
 
 		/* return -1 if no equilibrium index is found */
 		return -1;
