@@ -4,6 +4,22 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.schmeister.devprep.Arrays.*;
+import com.schmeister.devprep.LinkedLists.AddAsNumbers;
+import com.schmeister.devprep.LinkedLists.DetectLoop;
+import com.schmeister.devprep.LinkedLists.FindMiddle;
+import com.schmeister.devprep.LinkedLists.IntersectingList;
+import com.schmeister.devprep.LinkedLists.Merge2Sorted;
+import com.schmeister.devprep.LinkedLists.NthFromEnd;
+import com.schmeister.devprep.LinkedLists.PairwiseSwap;
+import com.schmeister.devprep.LinkedLists.Palindrome;
+import com.schmeister.devprep.LinkedLists.Queue;
+import com.schmeister.devprep.LinkedLists.RemoveLoop;
+import com.schmeister.devprep.LinkedLists.RemoveNode;
+import com.schmeister.devprep.LinkedLists.Reverse;
+import com.schmeister.devprep.LinkedLists.ReverseLLInGroups;
+import com.schmeister.devprep.LinkedLists.Rotate;
+import com.schmeister.devprep.LinkedLists.Sort;
+import com.schmeister.devprep.LinkedLists.Stack;
 import com.schmeister.devprep.Strings.Atoi;
 import com.schmeister.devprep.Strings.FormPalindrome;
 import com.schmeister.devprep.Strings.IsAnagram;
@@ -41,7 +57,7 @@ public class App {
 		StockBuySell.stockBuySell();
 		ZigZag.zigZag();
 		MakeBiggestNumber.makeBiggestNumber();
-		
+
 		// Strings
 		ReverseWords.reverseWords();
 		Permutations.main();
@@ -57,5 +73,23 @@ public class App {
 		Atoi.atoi();
 		Strstr.strstr();
 		LongestPrefix.longestPrefix();
+
+		// Linked Lists
+		FindMiddle.findMiddle();
+		Reverse.reverse();
+		Rotate.rotate();
+		ReverseLLInGroups.reverseInGroups();
+		IntersectingList.intersectingList();
+		DetectLoop.detectLoop();
+		RemoveLoop.removeLoop();
+		NthFromEnd.nthFromEnd();
+		Merge2Sorted.merge2Sorted();
+		PairwiseSwap.pairwiseSwap();
+		AddAsNumbers.addAsNumbers();
+		Palindrome.palindrome();
+		Queue.queue();
+		Stack.stack();
+		Sort.sortLinkedList();
+		RemoveNode.removenode();
 	}
 }
