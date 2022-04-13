@@ -40,11 +40,11 @@ public class LongestPalindrome {
 				maxLength = 2;
 			}
 		}
-		//printArray(table);
 
 		// Check for lengths greater than 2.
 		// k is length of substring
 		for (int k = 3; k <= n; ++k) {
+			// Print.print("LongestPalindrome", table);
 
 			// Fix the starting index
 			for (int i = 0; i < n - k + 1; ++i) {
@@ -77,6 +77,6 @@ public class LongestPalindrome {
 
 		String str = "forofgeeksskeeg";
 		length = longestPalSubstr(str);
-		Print.print("Palindrome", longestPalindrome, length);
+		Print.print("LongestPalindrome", longestPalindrome, length);
 	}
 }

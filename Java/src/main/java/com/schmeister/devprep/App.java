@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import com.schmeister.devprep.Arrays.*;
 import com.schmeister.devprep.LinkedLists.AddAsNumbers;
+import com.schmeister.devprep.LinkedLists.BalancedBrackets;
 import com.schmeister.devprep.LinkedLists.DetectLoop;
 import com.schmeister.devprep.LinkedLists.FindMiddle;
 import com.schmeister.devprep.LinkedLists.IntersectingList;
@@ -20,6 +21,8 @@ import com.schmeister.devprep.LinkedLists.ReverseLLInGroups;
 import com.schmeister.devprep.LinkedLists.Rotate;
 import com.schmeister.devprep.LinkedLists.Sort;
 import com.schmeister.devprep.LinkedLists.Stack;
+import com.schmeister.devprep.Numbers.Prime;
+import com.schmeister.devprep.StackAndQueues.NextGreatestElement;
 import com.schmeister.devprep.Strings.Atoi;
 import com.schmeister.devprep.Strings.FormPalindrome;
 import com.schmeister.devprep.Strings.IsAnagram;
@@ -34,6 +37,7 @@ import com.schmeister.devprep.Strings.RemoveDuplicates;
 import com.schmeister.devprep.Strings.ReverseWords;
 import com.schmeister.devprep.Strings.RomanToNumber;
 import com.schmeister.devprep.Strings.Strstr;
+import com.schmeister.devprep.Trees.Nary;
 
 /**
  * Hello world!
@@ -91,5 +95,14 @@ public class App {
 		Stack.stack();
 		Sort.sortLinkedList();
 		RemoveNode.removenode();
+		BalancedBrackets.balancedBrackets();
+		
+		// Stack and Queue
+		NextGreatestElement.nextGreatestElement();
+		
+		// Numbers
+		Prime.prime();
+		
+		Nary.nary();
 	}
 }

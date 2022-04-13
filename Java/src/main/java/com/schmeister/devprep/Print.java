@@ -13,12 +13,24 @@ public class Print {
 		System.out.printf("%-18s: %-20s %b\n", name, str, a1);
 	}
 
+	public static void print(String name, int i, boolean a1) {
+		System.out.printf("%-18s: %-20d %b\n", name, i, a1);
+	}
+
+	public static void print(String name, int i, int i2) {
+		System.out.printf("%-18s: %-20d %d\n", name, i, i2);
+	}
+
 	public static void print(String name, String str, String str2, boolean a1) {
 		System.out.printf("%-18s: %-10s %-10s %b\n", name, str, str2, a1);
 	}
 
 	public static void print(String name, String str, int a1) {
 		System.out.printf("%-18s: %-20s %d\n", name, str, a1);
+	}
+
+	public static void print(String name, String str, String str2) {
+		System.out.printf("%-18s: %-20s %s\n", name, str, str2);
 	}
 
 	public static void print(String name, int a1, int a2, int a3) {
@@ -60,6 +72,11 @@ public class Print {
 
 	public static void print(String name, Object[] arr) {
 		System.out.printf("%-18s: %s\n", name, Arrays.toString(arr));
+	}
+
+	public static void print(String name, boolean[][] arr) {
+		System.out.printf("%-18s\n", name);
+		print(arr);
 	}
 
 	public static void print(boolean table[][]) {
