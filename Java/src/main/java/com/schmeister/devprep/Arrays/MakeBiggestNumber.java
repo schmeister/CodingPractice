@@ -30,7 +30,7 @@ public class MakeBiggestNumber {
 			}
 		});
 
-		Iterator it = arr.iterator();
+		Iterator<String> it = arr.iterator();
 
 		while (it.hasNext())
 			System.out.print(it.next());

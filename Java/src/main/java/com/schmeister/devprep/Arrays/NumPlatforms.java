@@ -2,14 +2,12 @@ package com.schmeister.devprep.Arrays;
 
 import java.util.Arrays;
 
-import com.schmeister.devprep.App;
 import com.schmeister.devprep.util.Print;
 
 public class NumPlatforms {
 	public static void numPlatforms() {
 		int arr[] = { 900, 940, 950, 1100, 1500, 1800 };
 		int dep[] = { 910, 1200, 1120, 1130, 1900, 2000 };
-		int n = arr.length;
 		Print.print("Platforms", findPlatform(arr, dep));
 	}
 

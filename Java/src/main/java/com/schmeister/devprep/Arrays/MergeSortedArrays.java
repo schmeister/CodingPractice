@@ -1,17 +1,12 @@
 package com.schmeister.devprep.Arrays;
 
-import java.util.Arrays;
-
-import com.schmeister.devprep.App;
 import com.schmeister.devprep.util.Print;
 
 public class MergeSortedArrays {
 	public static void mergeSortedArrays() {
 		int[] arr1 = { 1, 3, 5, 7 };
-		int n1 = arr1.length;
 
 		int[] arr2 = { 2, 4, 6, 8 };
-		int n2 = arr2.length;
 
 		int[] arr3 = mergeSortedArrays(arr1, arr2);
 

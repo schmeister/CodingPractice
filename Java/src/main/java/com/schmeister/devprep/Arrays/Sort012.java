@@ -1,8 +1,5 @@
 package com.schmeister.devprep.Arrays;
 
-import java.util.Arrays;
-
-import com.schmeister.devprep.App;
 import com.schmeister.devprep.util.Print;
 
 public class Sort012 {
@@ -18,7 +15,6 @@ public class Sort012 {
 
 		int bottom = 0;
 		int top = arr_size - 1;
-		int mid = 0;
 
 		for (int x = 0; x < arr_size - 1; x++) {
 			int val = a[x];
