@@ -1,6 +1,6 @@
 package com.schmeister.devprep.Strings;
 
-import com.schmeister.devprep.Print;
+import com.schmeister.devprep.util.Print;
 
 public class IsRotated {
 	static boolean isRotated(String str1, String str2) {

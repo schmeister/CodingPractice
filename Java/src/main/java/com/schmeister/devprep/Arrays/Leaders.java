@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.schmeister.devprep.App;
-import com.schmeister.devprep.Print;
+import com.schmeister.devprep.util.Print;
 
 public class Leaders {
 

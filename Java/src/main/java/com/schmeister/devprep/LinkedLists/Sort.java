@@ -1,6 +1,6 @@
 package com.schmeister.devprep.LinkedLists;
 
-import com.schmeister.devprep.Print;
+import com.schmeister.devprep.util.Print;
 
 public class Sort {
 	class Node {

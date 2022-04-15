@@ -2,7 +2,7 @@ package com.schmeister.devprep.Strings;
 
 import java.util.HashMap;
 
-import com.schmeister.devprep.Print;
+import com.schmeister.devprep.util.Print;
 
 public class LongestUniqueSubStr {
 	static int longestUniqueSubsttr(String s) {

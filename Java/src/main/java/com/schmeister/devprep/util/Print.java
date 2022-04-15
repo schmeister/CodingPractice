@@ -1,4 +1,4 @@
-package com.schmeister.devprep;
+package com.schmeister.devprep.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;

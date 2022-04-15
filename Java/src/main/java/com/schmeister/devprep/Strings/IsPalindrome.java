@@ -1,7 +1,7 @@
 package com.schmeister.devprep.Strings;
 
 import com.schmeister.devprep.App;
-import com.schmeister.devprep.Print;
+import com.schmeister.devprep.util.Print;
 
 public class IsPalindrome {
 	static boolean isPalindrome(String str) {

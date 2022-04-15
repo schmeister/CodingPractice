@@ -3,7 +3,7 @@ package com.schmeister.devprep.Arrays;
 import java.util.Arrays;
 
 import com.schmeister.devprep.App;
-import com.schmeister.devprep.Print;
+import com.schmeister.devprep.util.Print;
 
 public class NumPlatforms {
 	public static void numPlatforms() {

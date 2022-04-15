@@ -3,7 +3,7 @@ package com.schmeister.devprep.Strings;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 
-import com.schmeister.devprep.Print;
+import com.schmeister.devprep.util.Print;
 
 public class RemoveDuplicates {
 	static String removeDuplicate(String str) {

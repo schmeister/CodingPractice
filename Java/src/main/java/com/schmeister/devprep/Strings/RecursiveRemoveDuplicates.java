@@ -1,6 +1,6 @@
 package com.schmeister.devprep.Strings;
 
-import com.schmeister.devprep.Print;
+import com.schmeister.devprep.util.Print;
 
 public class RecursiveRemoveDuplicates {
 	private static String removeDuplicates(String s, char ch) {

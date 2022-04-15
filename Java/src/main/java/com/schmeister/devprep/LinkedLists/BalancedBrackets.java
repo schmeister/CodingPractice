@@ -1,7 +1,7 @@
 package com.schmeister.devprep.LinkedLists;
 
-import com.schmeister.devprep.Print;
 import com.schmeister.devprep.LinkedLists.Rotate.Node;
+import com.schmeister.devprep.util.Print;
 
 public class BalancedBrackets {
 	class Node {

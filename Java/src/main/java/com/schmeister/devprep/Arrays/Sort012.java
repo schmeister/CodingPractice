@@ -3,7 +3,7 @@ package com.schmeister.devprep.Arrays;
 import java.util.Arrays;
 
 import com.schmeister.devprep.App;
-import com.schmeister.devprep.Print;
+import com.schmeister.devprep.util.Print;
 
 public class Sort012 {
 	public static void sort012() {

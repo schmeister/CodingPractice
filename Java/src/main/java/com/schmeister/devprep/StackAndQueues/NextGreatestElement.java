@@ -3,7 +3,7 @@ package com.schmeister.devprep.StackAndQueues;
 import java.util.Arrays;
 import java.util.Stack;
 
-import com.schmeister.devprep.Print;
+import com.schmeister.devprep.util.Print;
 
 public class NextGreatestElement {
 

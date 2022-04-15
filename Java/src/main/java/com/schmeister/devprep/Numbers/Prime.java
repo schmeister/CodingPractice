@@ -1,6 +1,6 @@
 package com.schmeister.devprep.Numbers;
 
-import com.schmeister.devprep.Print;
+import com.schmeister.devprep.util.Print;
 
 public class Prime {
 	static int i = 2;
