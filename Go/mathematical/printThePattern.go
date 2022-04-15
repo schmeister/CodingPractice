@@ -13,16 +13,14 @@ import (
 // 3 3 2 2 1 1
 // 3 2 1
 func PrintThePattern(n int) {
-	var sb strings.Builder
 
 	for i := n; i > 0; i-- {
-		sb.WriteString(fmt.Sprintf("   "))
+		var sb strings.Builder
 		for j := n; j > 0; j-- {
 			for k := i; k > 0; k-- {
 				sb.WriteString(fmt.Sprintf("%d", j))
 			}
 		}
-		sb.WriteString(fmt.Sprintln())
+		fmt.Printf("%s\n", fmt.Sprintf("Print The Pattern: %s", sb.String()))
 	}
-	fmt.Printf("Print The Pattern\n%s",sb.String())
 }

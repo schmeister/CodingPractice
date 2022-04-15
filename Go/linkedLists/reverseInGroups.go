@@ -1,6 +1,9 @@
 package linkedLists
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Node struct {
 	data int
@@ -19,57 +22,58 @@ func (parent *Node) addNode(d int) {
 	parent.next = &child
 }
 
-func (parent *Node) walkList() {
+func (parent *Node) walkList() string {
+	var sb strings.Builder
 	for parent != nil {
-		fmt.Printf("%3d",parent.data)
+		sb.WriteString(fmt.Sprintf("%3d", parent.data))
 		parent = parent.next
 	}
-	fmt.Printf("\n")
+	return sb.String()
 }
 
 func reverseKGroup(head *Node, k int) *Node {
-    var tail  *Node
-    cur := head
-    
-    tempHead := &Node{0, head}
-    previous := tempHead 
-    
-    for cur != nil {
-        tail = cur
-        linkedListIndex := 0
-        
-        for cur != nil && linkedListIndex < k {
-            cur = cur.next
-            linkedListIndex++
-        }
-        
-        if linkedListIndex < k { 
-            previous.next = tail
-        } else {
-            previous.next = reverse(tail, k)
-            previous = tail
-        }
-    }
-    return tempHead.next
+	var tail *Node
+	cur := head
+
+	tempHead := &Node{0, head}
+	previous := tempHead
+
+	for cur != nil {
+		tail = cur
+		linkedListIndex := 0
+
+		for cur != nil && linkedListIndex < k {
+			cur = cur.next
+			linkedListIndex++
+		}
+
+		if linkedListIndex < k {
+			previous.next = tail
+		} else {
+			previous.next = reverse(tail, k)
+			previous = tail
+		}
+	}
+	return tempHead.next
 }
 
 //Create a function to easily reverse the linkedList
 func reverse(head *Node, k int) *Node {
-    
-    var nextNode, previous *Node
-    
-    cur := head
-    
-    for cur != nil && k > 0 {
-        nextNode = cur.next
-        cur.next = previous
-        previous = cur
-        cur = nextNode
-        k--
-    }
-    head = previous
-    return head
-    
+
+	var nextNode, previous *Node
+
+	cur := head
+
+	for cur != nil && k > 0 {
+		nextNode = cur.next
+		cur.next = previous
+		previous = cur
+		cur = nextNode
+		k--
+	}
+	head = previous
+	return head
+
 }
 
 // https://golangbyexample.com/reverse-nodes-k-group-linked-list-golang/
@@ -83,7 +87,7 @@ func ReverseInGroups() {
 		head.addNode(i)
 	}
 
-	head.walkList()
+	fmt.Println("ReverseInGroups - pre:  ", head.walkList())
 	n := reverseKGroup(&head, 3)
-	n.walkList()
+	fmt.Println("ReverseInGroups - post: ", n.walkList())
 }
