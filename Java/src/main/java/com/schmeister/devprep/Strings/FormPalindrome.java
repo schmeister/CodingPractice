@@ -1,7 +1,5 @@
 package com.schmeister.devprep.Strings;
 
-import java.util.Arrays;
-
 import com.schmeister.devprep.util.Print;
 
 public class FormPalindrome {

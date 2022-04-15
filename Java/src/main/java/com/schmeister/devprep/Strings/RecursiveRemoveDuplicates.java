@@ -22,7 +22,6 @@ public class RecursiveRemoveDuplicates {
 				String remStr = removeDuplicates(s.substring(j + 1, s.length()), lastChar);
 
 				s = s.substring(0, i);
-				int k = s.length(), l = 0;
 
 				// Recursively remove all the adjacent
 				// characters formed by removing the
