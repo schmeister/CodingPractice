@@ -94,9 +94,8 @@ public class PairwiseSwap {
 	public static void pairwiseSwap() {
 		PairwiseSwap list1 = new PairwiseSwap();
 
-		Node temp = null;
 		for (int x = 0; x <= 25; x += 5) {
-			temp = list1.append(x);
+			list1.append(x);
 		}
 
 		Print.print("PairwiseSwap", list1.toString());

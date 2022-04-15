@@ -99,17 +99,16 @@ public class Merge2Sorted {
 		Merge2Sorted list1 = new Merge2Sorted();
 		Merge2Sorted list2 = new Merge2Sorted();
 
-		Node temp = null;
 		for (int x = 0; x <= 25; x += 5) {
-			temp = list1.append(x);
+			list1.append(x);
 		}
 		for (int x = 1; x <= 40; x += 3) {
-			temp = list2.append(x);
+			list2.append(x);
 		}
 
 		Print.print("Merge2Sorted (1)", list1.toString());
 		Print.print("Merge2Sorted (2)", list2.toString());
-		list1.head = list1.merge(list1.head, list2.head);
+		list1.head = merge(list1.head, list2.head);
 		Print.print("Merge2Sorted", list1.toString());
 	}
 }

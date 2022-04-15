@@ -26,7 +26,6 @@ public class Reverse {
 		StringBuilder sb = new StringBuilder();
 		
 		Node node = head;
-		Node rev = null;
 		if (head != null) {
 			while (node != null) {
 				sb.append(node.data);

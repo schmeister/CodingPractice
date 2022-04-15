@@ -19,7 +19,6 @@ public class IntersectingList {
 	@Override
 	public String toString() {
 
-		Node node = head1;
 		String one = loop(head1);
 		String two = loop(head2);
 

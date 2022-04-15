@@ -80,9 +80,8 @@ public class NthFromEnd {
 
 	public static void nthFromEnd() {
 		NthFromEnd fm = new NthFromEnd();
-		Node temp = null;
 		for (int x = 0; x <= 7; x++) {
-			temp = fm.append(x);
+			fm.append(x);
 		}
 		int pos = 5;
 		Print.print("NthFromEnd", fm.toString());

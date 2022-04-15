@@ -1,6 +1,5 @@
 package com.schmeister.devprep.LinkedLists;
 
-import com.schmeister.devprep.LinkedLists.Reverse.Node;
 import com.schmeister.devprep.util.Print;
 
 public class FindMiddle {
@@ -40,7 +39,6 @@ public class FindMiddle {
 		StringBuilder sb = new StringBuilder();
 		
 		Node node = head;
-		Node rev = null;
 		if (head != null) {
 			while (node != null) {
 				sb.append(node.data);
