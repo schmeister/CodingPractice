@@ -45,64 +45,6 @@ import com.schmeister.devprep.Trees.Nary;
  */
 public class App {
 	public static void main(String[] args) {
-		// Arrays
-		SubArrayWithGivenSum.getSum();
-		CountTriplets.triplets();
-		Kadanes.kadanes();
-		MissingNumber.getMissingNo();
-		MergeSortedArrays.mergeSortedArrays();
-		ReArrangeAlternating.rearrangeAlternating();
-		Sort012.sort012();
-		EquilibriumPoint.equilibriumPoint();
-		Leaders.leaders();
-		NumPlatforms.numPlatforms();
-		ReverseInGroups.reverse();
-		RainWater.rainWater();
-		StockBuySell.stockBuySell();
-		ZigZag.zigZag();
-		MakeBiggestNumber.makeBiggestNumber();
 
-		// Strings
-		ReverseWords.reverseWords();
-		Permutations.main();
-		LongestPalindrome.longest();
-		IsPalindrome.isPalindrome();
-		RecursiveRemoveDuplicates.recursiveRemoveDups();
-		IsRotated.isRotated();
-		RomanToNumber.romanToNumber();
-		IsAnagram.isAnagram();
-		RemoveDuplicates.removeDuplicates();
-		FormPalindrome.formPalindrome();
-		LongestUniqueSubStr.longestUnique();
-		Atoi.atoi();
-		Strstr.strstr();
-		LongestPrefix.longestPrefix();
-
-		// Linked Lists
-		FindMiddle.findMiddle();
-		Reverse.reverse();
-		Rotate.rotate();
-		ReverseLLInGroups.reverseInGroups();
-		IntersectingList.intersectingList();
-		DetectLoop.detectLoop();
-		RemoveLoop.removeLoop();
-		NthFromEnd.nthFromEnd();
-		Merge2Sorted.merge2Sorted();
-		PairwiseSwap.pairwiseSwap();
-		AddAsNumbers.addAsNumbers();
-		Palindrome.palindrome();
-		Queue.queue();
-		Stack.stack();
-		Sort.sortLinkedList();
-		RemoveNode.removenode();
-		BalancedBrackets.balancedBrackets();
-		
-		// Stack and Queue
-		NextGreatestElement.nextGreatestElement();
-		
-		// Numbers
-		Prime.prime();
-		
-		Nary.nary();
 	}
 }

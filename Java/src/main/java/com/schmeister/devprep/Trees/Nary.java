@@ -19,7 +19,7 @@ public class Nary {
 		if (root == null)
 			return;
 		
-		System.out.println(root.data);
+		System.out.printf("%d ",root.data);
 		
 		Iterator<Node> iter = root.children.iterator();
 		while (iter.hasNext()) {
@@ -38,6 +38,9 @@ public class Nary {
 		
 		nary.root.children.get(0).children.add(new Node(11));
 		
+		System.out.printf("Nary preorder: ");
 		nary.traverse(nary.root);
+		System.out.printf("\n");
+		
 	}
 }
