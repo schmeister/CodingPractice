@@ -1,6 +1,10 @@
 package tree
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+	"sort"
+)
 
 type Record struct {
 	ID     int
@@ -11,31 +15,96 @@ type Record struct {
 type Node struct {
 	ID       int
 	Children []*Node
-	// feel free to add fields as you see fit
+	Parent   int
 }
 
 func Build(records []Record) (*Node, error) {
+	if len(records) == 0 {
+		return nil, nil
+	}
 	dict := make(map[int]*Node)
 
-	// Iterate over incoming records
-	fmt.Printf("Incoming\n")
+	// Iterate over incoming records and add to map
+	fmt.Printf("\n")
 	for _, r := range records {
-		// See if dict contains this record
-		if _, ok := dict[r.ID]; ok {
-			// It does, do nothing
-		} else {
-			// it does not, create it, and add to dict
-			dict[r.ID] = &Node{
-				ID:       r.ID,
-				Children: []*Node{},
+		fmt.Printf("Received: (Parent)%d --> (ID)%d\n", r.Parent, r.ID)
+		node := Node{
+			ID:       r.ID,
+			Children: make([]*Node, 0),
+			Parent:   r.Parent}
+
+		_, ok := dict[node.ID]
+		if ok {
+			fmt.Printf("DUPLICATE %d\n", node.ID)
+			return dict[0], errors.New("Duplicate")
+		}
+		dict[node.ID] = &node
+	}
+	fmt.Printf("dict size: %d\n", len(dict))
+
+	visited := make(map[int]bool)
+	for _, node := range dict {
+
+		if node.Parent == node.ID || visited[node.ID] {
+			continue
+		}
+		visited[node.ID] = true
+
+		myParent := node.Parent
+		pNode := dict[myParent]
+
+		if pNode != nil && node.Parent <= node.ID {
+			dict[myParent].Children = append(dict[myParent].Children, node)
+
+			sort.SliceStable(dict[myParent].Children, func(i, j int) bool {
+				return dict[myParent].Children[i].ID < dict[myParent].Children[j].ID
+			})
+		} else if node.Parent > node.ID {
+			return nil, errors.New("Root node has parent")
+		}
+	}
+
+	fmt.Printf("DONE\n")
+	vm = make(map[int]bool)
+
+	value, ok := dict[0]
+	if !ok {
+		fmt.Printf("root node: \n")
+		return value, errors.New("No root node")
+	} else {
+		PrintMap(dict)
+		Preorder(dict[0], "")
+		return value, nil
+	}
+}
+
+func PrintMap(dict map[int]*Node) {
+	for _, n := range dict {
+		children := n.Children
+		fmt.Printf("%d --> (", n.ID)
+		for idx, child := range children {
+			fmt.Printf("%d", child.ID)
+			if idx < len(children)-1 {
+				fmt.Printf(" ")
 			}
 		}
-		fmt.Printf("ID:%d Parent:%d\n", r.ID, r.Parent)
+		fmt.Printf(")\n")
 	}
-	fmt.Printf("On to Map\n")
+}
 
-	for _, val := range dict{
-		fmt.Printf("ID:%d Parent:%d\n", val.ID, len(val.Children))
+var vm map[int]bool
+
+func Preorder(root *Node, space string) {
+	_, ok := vm[root.ID]
+	if ok {
+		return
+	} else {
+		//	vm[root.ID] = true
 	}
-	return &Node{}, nil
+
+	fmt.Printf("%s%d\n", space, root.ID)
+	for _, c := range root.Children {
+		Preorder(c, space+"  ")
+	}
+	//	panic("")
 }
