@@ -79,8 +79,9 @@ func recognizeDigit(line []string) string {
 			} else {
 				return "?"
 			}
+			
 		}
-		
+
 	}
 	return "?"
 }
