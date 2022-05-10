@@ -80,6 +80,7 @@ func recognizeDigit(line []string) string {
 				return "?"
 			}
 		}
+		
 	}
 	return "?"
 }
