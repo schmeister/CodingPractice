@@ -1,4 +1,4 @@
-package fractionalKnapSack
+package greedy
 
 import (
 	"fmt"
@@ -65,3 +65,8 @@ func FractionalKnapSack() {
 	fmt.Println(items2)
 	fmt.Println(fractionalKnapsack(50, items2, 50))
 }
+
+func main(){
+	FractionalKnapSack()
+}
+

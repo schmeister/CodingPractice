@@ -1,4 +1,4 @@
-package fractionalKnapSack
+package greedy
 
 // Name sorted
 // Len is part of sort.Interface.

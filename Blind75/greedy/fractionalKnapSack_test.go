@@ -1,4 +1,4 @@
-package fractionalKnapSack
+package greedy
 
 import (
 	"testing"
