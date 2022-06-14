@@ -4,6 +4,7 @@ import (
 	"schmeister/google/arbitraryPointer"
 	"schmeister/google/balancedParends"
 	"schmeister/google/circularGraph"
+	"schmeister/google/diningPhilosophers"
 	"schmeister/google/duplicateSubTree"
 	"schmeister/google/findBoundaries"
 	"schmeister/google/jumpingNumbers"
@@ -12,6 +13,7 @@ import (
 	"schmeister/google/lruCache"
 	"schmeister/google/palindrome"
 	"schmeister/google/pathsForASum"
+	"schmeister/google/removeElement"
 	"schmeister/google/subArraySum"
 	"schmeister/google/wordBreak"
 	"testing"
@@ -44,4 +46,9 @@ func TestMain(t *testing.T) {
 	wordBreak.WordBreak()
 
 	duplicateSubTree.DuplicateSubTree()
+
+	removeElement.RemoveElement()
+
+	diningPhilosophers.DiningPhilosophers()
+
 }

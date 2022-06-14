@@ -28,6 +28,5 @@ func AddBinary(a string, b string) string {
 		carry = (va + vb + carry) / 2
 		runeC = append([]rune{bit + '0'}, runeC...)
 	}
-	fmt.Println(string(runeC))
-	return ""
+	return string(runeC)
 }
