@@ -1,12 +1,10 @@
 package combinationSum
 
-import (
-	"fmt"
-	"sort"
-)
+// CombinationSum2 - Bad performance O(N^2)
+func CombinationSum2(candidates []int, target int) [][]int {
 
-func CombinationSumUp(candidates []int, target int) {
 	size := len(candidates) - 1
+	result := make([][]int, 0)
 	for i := size; i >= 0; i-- {
 		k := i
 		t := target
@@ -16,56 +14,59 @@ func CombinationSumUp(candidates []int, target int) {
 
 		for sum < t && k >= 0 {
 			curr := candidates[k]
-			sum += curr
+			group = append(group, curr)
+			pos = append(pos, k)
+			sum = sumArray(group)
 
-			if sum <= target {
-				group = append(group, candidates[k])
-				pos = append(pos, k)
-			} else {
-				k--
-				sum -= curr
-			}
 			if sum == target {
-				fmt.Println("--->", group, sum)
-				rem := group[len(group)-1]
-				sum -= rem
-
+				result = append(result, append(make([]int, 0), (group)...))
 				group = group[:len(group)-1]
-				kk := pos[len(pos)-1]
+				k = pos[len(pos)-1] - 1
 				pos = pos[:len(pos)-1]
-				k = kk - 1
+			} else if sum > target {
+				group = group[:len(group)-1]
+				k = pos[len(pos)-1] - 1
+				pos = pos[:len(pos)-1]
 			}
+
+			for k < 0 && len(pos) > 1 {
+				group = group[:len(group)-1]
+				k = pos[len(pos)-1] - 1
+				pos = pos[:len(pos)-1]
+				sum = sumArray(group)
+			}
+			sum = sumArray(group)
 		}
 	}
+	return result
 }
 
 func sumArray(arr []int) int {
 	sum := 0
-	for _,val := range arr {
+	for _, val := range arr {
 		sum += val
 	}
 	return sum
 }
 
 func CombinationSum(candidates []int, target int) [][]int {
-	sort.Ints(candidates)
 	ret := make([][]int, 0)
 	ans := make([]int, 0)
 	dfs(candidates, target, 0, &ans, &ret)
 	return ret
 }
 
-func dfs(nums []int, target, i int, ans *[]int, ret *[][]int) {
-	if target < 0 {
+func dfs(nums []int, remainder, idx int, ans *[]int, ret *[][]int) {
+	if remainder < 0 {
 		return
 	}
-	if target == 0 {
+	if remainder == 0 {
 		*ret = append(*ret, append(make([]int, 0), (*ans)...))
 		return
 	}
-	for j := i; j < len(nums) && target >= nums[j]; j++ {
+	for j := idx; j < len(nums) && remainder >= nums[j]; j++ {
 		*ans = append(*ans, nums[j])
-		dfs(nums, target-nums[j], j, ans, ret)
+		dfs(nums, remainder-nums[j], j, ans, ret)
 		*ans = (*ans)[:len(*ans)-1]
 	}
 }
